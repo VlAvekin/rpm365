@@ -1,0 +1,79 @@
+{
+	"info": {
+		"_postman_id": "43ebf467-1ad6-4ef2-b086-22f1d8cf6450",
+		"name": "RPM365",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "12206232"
+	},
+	"item": [
+		{
+			"name": "get patient",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/patient?page=1&size=5&search&doctorIds",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"patient"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "size",
+							"value": "5"
+						},
+						{
+							"key": "search",
+							"value": null
+						},
+						{
+							"key": "doctorIds",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create visit",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"start\": \"2025-02-16 12:10 +0200\",\n    \"end\": \"2025-02-16 12:20 +0200\",\n    \"patientId\": 1,\n    \"doctorId\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/visit",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"visit"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

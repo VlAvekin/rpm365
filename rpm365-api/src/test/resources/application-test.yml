@@ -1,0 +1,25 @@
+server:
+  port: 8080
+
+api:
+  prefix: /api
+  v1: v1
+
+spring:
+  application:
+    name: rpm365-api
+
+  flyway:
+    enabled: false
+
+  jpa:
+    generate-ddl: false
+    open-in-view: false
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
+
+  datasource:
+    url: jdbc:mysql://localhost:3307/test
+    username: root
+    password: root
